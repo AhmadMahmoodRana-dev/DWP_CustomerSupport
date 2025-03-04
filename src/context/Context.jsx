@@ -4,7 +4,7 @@ export const Context = createContext();
 const ContextProvider = (props) => {
   // () => BASIC
   const user = true;
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   // () => RETURN VALUE
 

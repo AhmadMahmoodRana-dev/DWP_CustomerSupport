@@ -7,15 +7,9 @@ import { FaRegSun } from "react-icons/fa";
 import { useTheme } from "./context/ThemeContext";
 
 export default function App() {
-  const { toggleTheme,theme } = useTheme();
   return (
     <div className="w-full h-auto relative">
-      <a
-        onClick={() => toggleTheme()}
-        className={`${theme === 'dark' ? 'bg-[#181818]' : 'bg-[#181818]'}   absolute border-2 flex justify-center items-center rounded-full w-10 h-10 top-[87%] right-[1%] z-10`}
-      >
-      {theme === "light"? <FaRegSun size={22} color="yellow" /> : <MdDarkMode size={22} color="silver" />}
-      </a>
+      
       <Routes>
         {/* Public Routes */}
         <Route element={<PublicRoutes />}>
