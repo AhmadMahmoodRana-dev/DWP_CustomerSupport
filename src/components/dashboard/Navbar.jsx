@@ -12,7 +12,7 @@ const Navbar = () => {
   const { toggleTheme, theme } = useTheme();
 
   return (
-    <header class="text-gray-600 body-font md:flex hidden justify-center items-center px-6 py-5">
+    <header class="text-gray-600 body-font md:flex hidden justify-center items-center px-6 pb-5 pt-2">
       <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <a
           onClick={() => setIsCollapsed(!isCollapsed)}

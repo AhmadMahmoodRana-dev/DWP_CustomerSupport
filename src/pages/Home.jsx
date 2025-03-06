@@ -7,14 +7,14 @@ import TotalTrafficCard from "@/components/dashboard/TotalTrafficCard";
 const Home = () => {
   return (
     <div className="px-8">
-      <div className="flex flex-wrap gap-4 justify-center">
+      <div className="grid xl:grid-cols-4 lg:grid-cols-2 grid-cols-1 justify-center gap-6 px-1">
         <MainCard />
         <MainCard />
         <MainCard />
         <MainCard />
       </div>
 
-      <div className="three-cards-handler mt-5 flex gap-4 flex-wrap">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 px-1 pt-6">
         <CountryCard />
         <TotalEarningCard/>
         <TotalTrafficCard/>

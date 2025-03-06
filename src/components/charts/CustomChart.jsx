@@ -19,7 +19,7 @@ const data = [
 
 export default function CustomChart() {
   return (
-    <div className="w-full h-[90%]  p-4 rounded-lg">
+    <div className="w-full h-[80%]  p-4 rounded-lg">
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart
           data={data}
@@ -27,13 +27,18 @@ export default function CustomChart() {
         >
           <XAxis dataKey="name" stroke="#ddd" tick={{fontSize:10}} dy={15} />
           <YAxis stroke="#ddd" axisLine={false} tickLine={false} tick={{fontSize:10}} dx={-10} dy={10} />
-          <Tooltip />
-          <Legend
-            verticalAlign="top"
-            align="left"
-            iconType="circle"
-            wrapperStyle={{ color: "white", fontSize: "14px" }}
-          />
+          <Tooltip
+             contentStyle={{
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              border: "none",
+              borderRadius: "8px",
+              color: "#fff",
+            }}
+            labelStyle={{ color: "#A855F7" }}
+            itemStyle={{ color: "#fff" }}
+            cursor={{ stroke: "#A855F7", strokeWidth: 2 }}
+           />
+        
           <Bar dataKey="clicks" fill="#3361ff" name="Clicks" />
           <Bar dataKey="views" fill="#18bb66" name="Views" />
         </ComposedChart>

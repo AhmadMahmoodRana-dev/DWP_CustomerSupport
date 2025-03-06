@@ -35,7 +35,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`min-h-screen block h-auto ${
+      className={`min-h-screen xl:block h-auto hidden ${
         theme == "dark" ? "text-white" : "text-gray-600"
       } transition-all duration-300 relative ${
         isCollapsed ? "w-16" : "w-[330px]"
