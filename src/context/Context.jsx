@@ -5,6 +5,7 @@ const ContextProvider = (props) => {
   // () => BASIC
   const user = true;
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [openMobile, setOpenMobile] = useState(false);
 
   // () => RETURN VALUE
 
@@ -12,6 +13,8 @@ const ContextProvider = (props) => {
     user,
     isCollapsed,
     setIsCollapsed,
+    openMobile,
+    setOpenMobile,
   };
 
   return (

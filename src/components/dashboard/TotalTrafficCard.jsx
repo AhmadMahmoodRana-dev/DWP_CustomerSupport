@@ -4,8 +4,8 @@ import MyDropdownMenu from "./MyDropdownMenu";
 
 const TotalTrafficCard = () => {
   return (
-    <div className="w-full bg-[#212121] min-h-[65vh] h-auto border border-[#4f4f4f] rounded-md p-4">
-      <div className="top-container flex justify-between items-center text-[1.1rem] text-gray-300">
+    <div className="w-full bg-[#212121] h-auto border border-[#4f4f4f] rounded-md p-4">
+      <div className="top-container pb-3 flex justify-between items-center text-[1.1rem] text-gray-300">
         <h1 className="tracking-wide font-semibold">Total Traffic</h1>
         <MyDropdownMenu />
       </div>

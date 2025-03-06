@@ -94,8 +94,8 @@ const Sidebar = () => {
             </button>
             {/* Floating Tooltip when Sidebar is Collapsed */}
             {isCollapsed && (
-              <div className="absolute left-full z-10 top-0 bg-gray-800 text-white shadow-lg min-w-[200px] rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-1000">
-                <div className="px-4 py-2 font-bold">{item.name}</div>
+              <div className="absolute left-[110%] z-10 top-0 bg-[#212121]  text-white shadow-2xl border border-[#4f4f4f] min-w-[200px] rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-1000">
+                <Link to={item.link} className="px-4 py-2 font-bold">{item.name}</Link>
                 {item.subItems &&
                   item.subItems.map((subItem) => (
                     <Link

@@ -30,9 +30,9 @@ const TotalEarningCard = () => {
     },
   ];
   return (
-    <div className="w-full bg-[#212121] min-h-[65vh] h-auto border border-[#4f4f4f] rounded-md p-4">
+    <div className="w-full bg-[#212121] h-auto border border-[#4f4f4f] rounded-md p-4">
       {/* Top */}
-      <div className="top-container flex justify-between items-center text-[1.1rem] text-gray-300">
+      <div className="top-container pb-3 flex justify-between items-center text-[1.1rem] text-gray-300">
         <h1 className="tracking-wide font-semibold">Total Earnings</h1>
         <MyDropdownMenu />
       </div>
