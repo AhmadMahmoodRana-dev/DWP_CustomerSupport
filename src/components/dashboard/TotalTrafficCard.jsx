@@ -1,10 +1,12 @@
 import React from "react";
 import CustomChart from "../charts/CustomChart";
 import MyDropdownMenu from "./MyDropdownMenu";
+import { useTheme } from "@/context/ThemeContext";
 
 const TotalTrafficCard = () => {
+  const {theme} = useTheme()
   return (
-    <div className="w-full bg-[#212121] h-auto border border-[#4f4f4f] rounded-md p-4">
+    <div className={`countryCard w-full ${theme === "dark" ? "bg-[#212121] border border-[#4f4f4f]" : "border border-gray-200" }  h-auto rounded-md p-4`}>
       <div className="top-container pb-3 flex justify-between items-center text-[1.1rem] text-gray-300">
         <h1 className="tracking-wide font-semibold">Total Traffic</h1>
         <MyDropdownMenu />

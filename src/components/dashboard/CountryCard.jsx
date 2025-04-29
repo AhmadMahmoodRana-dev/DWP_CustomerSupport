@@ -8,8 +8,10 @@ import india from "../../assets/india.png";
 import russia from "../../assets/russia.png";
 import UAE from "../../assets/UAE.png";
 import usa from "../../assets/usa.png";
+import { useTheme } from "@/context/ThemeContext";
 const CountryCard = () => {
-    const countryList = [
+  const {theme} = useTheme() 
+  const countryList = [
         {
           id: 1,
           name: "Australia",
@@ -62,9 +64,9 @@ const CountryCard = () => {
       ];
     
   return (
-    <div className="countryCard w-full bg-[#212121] h-auto border border-[#4f4f4f] rounded-md p-4">
+    <div className={`countryCard w-full ${theme === "dark" ? "bg-[#212121] border border-[#4f4f4f]" : "border border-gray-200" }  h-auto rounded-md p-4`}>
       {/* Top */}
-      <div className="top-container pb-3 flex justify-between items-center text-[1.1rem] text-gray-300">
+      <div className={`top-container pb-3 flex justify-between items-center text-[1.1rem] ${ theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
         <h1 className="tracking-wide font-semibold">Sales by Countries</h1>
         <MyDropdownMenu />
       </div>
@@ -79,10 +81,10 @@ const CountryCard = () => {
               <div className="country-div flex justify-center items-center gap-4">
                 <img src={country?.image} className="w-[40px] h-[40px]" />
                 <div>
-                  <h1 className="text-gray-300 text-xl font-semibold tracking-wide">
+                  <h1 className={`${ theme === "dark" ? "text-gray-300" : "text-gray-600"} text-xl font-semibold tracking-wide`}>
                     {country?.value}
                   </h1>
-                  <h1 className="text-gray-400 font-semibold tracking-wider text-sm">
+                  <h1 className={`${ theme === "dark" ? "text-gray-400" : "text-gray-600"}  tracking-wider text-sm`}>
                     {country?.name}
                   </h1>
                 </div>

@@ -1,38 +1,42 @@
 import { FaArrowUp } from "react-icons/fa";
 import MyAreaChart from "../charts/MyAreaChart";
 import MyDropdownMenu from "./MyDropdownMenu";
-import school from "../../assets/school.png";
-import wallet from "../../assets/wallet.png";
-import flag from "../../assets/flag.png";
-
+import { useTheme } from "@/context/ThemeContext";
+import { CiFlag1 } from "react-icons/ci";
+import { CiWallet } from "react-icons/ci";
+import { IoSchoolOutline } from "react-icons/io5";
 const TotalEarningCard = () => {
+  const {theme} = useTheme()
   const SalesList = [
     {
       id: 1,
       name: "Australia",
-      image: wallet,
+      image: <CiWallet color="#18bb66" size={20} />,
+      color:"bg-[#194f34]/30",
       value: "$84.5k",
       percent: 25,
     },
     {
       id: 2,
       name: "Brazil",
-      image: flag,
+      image: <CiFlag1 color="#3361ff" size={20} />,
+      color:"bg-[#3655a4]/30",
       value: "$545.69",
       percent: -10,
     },
     {
       id: 3,
       name: "China",
-      image: school,
+      image: <IoSchoolOutline color="#fb2c36" size={20} />,
+      color:"bg-[#fb2c36]/30",
       value: "$84.5k",
       percent: 25,
     },
   ];
   return (
-    <div className="w-full bg-[#212121] h-auto border border-[#4f4f4f] rounded-md p-4">
+    <div className={`countryCard w-full ${theme === "dark" ? "bg-[#212121] border border-[#4f4f4f]" : "border border-gray-200" }  h-auto rounded-md p-4`}>
       {/* Top */}
-      <div className="top-container pb-3 flex justify-between items-center text-[1.1rem] text-gray-300">
+      <div className={`top-container pb-3 flex justify-between items-center text-[1.1rem] ${ theme === "dark" ? "text-gray-300" : "text-gray-600"}`}>
         <h1 className="tracking-wide font-semibold">Total Earnings</h1>
         <MyDropdownMenu />
       </div>
@@ -53,7 +57,7 @@ const TotalEarningCard = () => {
               className="w-full h-auto flex justify-between items-center"
             >
               <div className="country-div flex justify-center items-center gap-4">
-                <img src={sale?.image} className="" />
+               <div className={`${sale?.color} rounded-md p-3`}>{sale?.image}</div>
                 <div>
                   <h1 className="text-gray-300 text-xl font-semibold tracking-wide">
                     {sale?.value}
